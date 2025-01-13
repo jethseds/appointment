@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css" />
+<div class="wrapper">
+<div class="sidebar">
+  <ul class="nav flex-column">
+    <li class="nav-item mt-5 mb-5 text-center">
+      <a class="nav-link text-secondary fw-semibold" href="#">
+        <img src="/images/logo.png" width="100px">
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-secondary fw-semibold" href="/Admin/Employees"><i class="fas fa-users"></i> Employees</a>
+      <a class="nav-link text-secondary fw-semibold" href="/Admin/Services"><i class="fas fa-cog"></i> Services</a>
+    </li>
+  </ul>
+
+  <!-- Logout at the bottom -->
+  <ul class="nav flex-column mt-auto">
+    <li class="nav-item">
+      <a class="nav-link text-secondary fw-semibold" href="/Account/Login"><i class="fas fa-sign-out"></i> Logout</a>
+    </li>
+  </ul>
+</div>
+
+<div class="container-fluid bg-light" style="height: 100vh;">
+@{
+    var accountList = ViewData["AccountList"] as List<Appointment.Models.AccountModel>;
+}
+     <p>@ViewData["ConnectionStatus"]</p>
+    <table id="example" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (accountList != null && accountList.Any())
+            {
+                foreach (var account in accountList)
+                {
+                    <tr>
+                        <td>@account.FirstName</td>
+                        <td>@account.MiddleName</td>
+                        <td>@account.LastName</td>
+                        <td>@account.Email</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3">No data available.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.2.1/js/dataTables.bootstrap5.js"></script>
+<script>
+    new DataTable('#example');
+</script>
