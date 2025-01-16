@@ -20,6 +20,29 @@ html {
 body {
   margin-bottom: 60px;
 }
+.first-screen {
+    position: relative;
+    background-image: url(../images/bg.png);
+    background-size: cover; /* Ensures the image covers the whole container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    height: 80vh; /* Makes the element take up the full viewport height */
+}
+.first-screen-content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100px;
+}
+.second-screen{
+    margin-top: -50px;
+}
+.schedule-card {
+    border: 2px solid transparent;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
 .login-box,
 .register-box {
     max-width: 460px;

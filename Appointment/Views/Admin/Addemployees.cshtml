@@ -1,0 +1,113 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model AccountModel
+
+<link rel="stylesheet" href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css" />
+<div class="wrapper">
+    <div class="sidebar">
+        <ul class="nav flex-column">
+            <li class="nav-item mt-5 mb-5 text-center">
+                <a class="nav-link text-secondary fw-semibold" href="#">
+                    <img src="/images/logo.png" width="100px">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-secondary fw-semibold" href="/Admin/Employees"><i class="fas fa-users"></i> Employees</a>
+                <a class="nav-link text-secondary fw-semibold" href="/Admin/Services"><i class="fas fa-cog"></i> Services</a>
+            </li>
+        </ul>
+
+        <!-- Logout at the bottom -->
+        <ul class="nav flex-column mt-auto">
+            <li class="nav-item">
+                <a class="nav-link text-secondary fw-semibold" href="/Account/Login"><i class="fas fa-sign-out"></i> Logout</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container-fluid bg-light" style="height: 100vh;">
+        
+
+        <form asp-action="Addemployees" method="POST">
+    
+            <input type="hidden" name="Id" value="@Model?.Id.ToString()" />
+
+           
+            <div class="row">
+                <div class="col-lg-4 mt-3">
+                    <div class="form-group has-feedback form-control" style="height: 45px;position: relative;">
+                        <input type="text" name="firstname" id="FirstName" value="@Model?.FirstName" placeholder="First Name" style="width: 100%;height: 100%;border: unset;box-shadow: none;outline-style: none;" required>
+
+
+                        <span class="fa fa-user form-control-feedback" style="top: 50%;transform: translateY(-50%);position:absolute;right: 10px;"></span>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-3">
+                    <div class="form-group has-feedback form-control" style="height: 45px;position: relative;">
+                        <input type="text" name="middlename" id="MiddleName" value="@Model?.MiddleName" placeholder="Middle Name" style="width: 100%;height: 100%;border: unset;box-shadow: none;outline-style: none;" required>
+                        <span class="fa fa-user form-control-feedback" style="top: 50%;transform: translateY(-50%);position:absolute;right: 10px;"></span>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-3">
+                    <div class="form-group has-feedback form-control" style="height: 45px;position: relative;">
+                        <input type="text" name="lastname" id="LastName" value="@Model?.LastName" placeholder="Last Name" style="width: 100%;height: 100%;border: unset;box-shadow: none;outline-style: none;" required>
+                        <span class="fa fa-user form-control-feedback" style="top: 50%;transform: translateY(-50%);position:absolute;right: 10px;"></span>
+                    </div>
+                </div> 
+                <div class="col-lg-6 mt-3">
+                    <div class="form-group has-feedback form-control" style="height: 45px;position: relative;">
+                        <input type="email" name="email" id="Email" value="@Model?.Email" placeholder="Email" style="width: 100%;height: 100%;border: unset;box-shadow: none;outline-style: none;" required>
+                        <span class="fa fa-at form-control-feedback" style="top: 50%;transform: translateY(-50%);position:absolute;right: 10px;"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-3">
+                    <div class="form-group has-feedback form-control" style="height: 45px;position: relative;">
+                        <input type="password" name="password" id="Password" value="@Model?.Password" placeholder="******" style="width: 100%;height: 100%;border: unset;box-shadow: none;outline-style: none;" required>
+                        <i class="fa fa-eye-slash toggle-password" style="top: 50%;transform: translateY(-50%);position:absolute;right: 10px;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-12 mt-3">
+                    <div class="form-group has-feedback form-control" style="height: 45px;position: relative;">
+                        <select name="type" id="Type" style="width: 100%;height: 100%;border: unset;box-shadow: none;outline-style: none;" required>
+                            
+
+                            @if (Model != null)
+                            {
+                                @if (!string.IsNullOrEmpty(Model.Id))
+                                {
+                                    @if (Model.Id == "1")
+                                    {
+                                        <option value="1" selected>Dentist</option>
+                                        <option value="2">Receptionist</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="2" selected>Receptionist</option>
+                                        <option value="1">Dentist</option>
+                                    }
+                                }
+                                else
+                                {
+                                    <option value="2" selected>Receptionist</option>
+                                    <option value="1">Dentist</option>
+                                }
+                            } else {
+                            
+                                    <option value="2" selected>Receptionist</option>
+                                    <option value="1">Dentist</option>
+                                
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+             <br>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-block btn-flat" style="background: #00bf63; color: #fff; border: unset;height: 45px;font-size: 23px;" name="register">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

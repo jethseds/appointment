@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CXTCx9HveqrnperB/klstYMEBDe/nYDHNhGJynN+lMs=",
+  "Hash": "BLtDmsYXS9UN8BMCGc3TCv3by0HHQG5LxCiG3SHFyVM=",
   "Source": "Appointment",
   "BasePath": "_content/Appointment",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ct34cosm0c",
-      "Integrity": "sOd6To49yxSHhv+J3Qc8fdQ6Xx2ri6PE5egMyEFXmnk=",
+      "Fingerprint": "r1ayyqo99v",
+      "Integrity": "oc6ccIjMXTCCxV/dnIAskAVgJ9O7RoJARVxm0Wlp1W0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\C Sharp\\Appointment\\Appointment\\wwwroot\\images\\bg.png",
+      "SourceId": "Appointment",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\C Sharp\\Appointment\\Appointment\\wwwroot\\",
+      "BasePath": "_content/Appointment",
+      "RelativePath": "images/bg#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t88d7riodf",
+      "Integrity": "A8JlwYEYpQCZBO+W01umf4Lkrjg3g/eXNN7NgBr32zY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bg.png"
     },
     {
       "Identity": "D:\\C Sharp\\Appointment\\Appointment\\wwwroot\\images\\logo.jpg",
@@ -1558,7 +1579,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2657"
+          "Value": "3312"
         },
         {
           "Name": "Content-Type",
@@ -1566,11 +1587,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sOd6To49yxSHhv+J3Qc8fdQ6Xx2ri6PE5egMyEFXmnk=\""
+          "Value": "\"oc6ccIjMXTCCxV/dnIAskAVgJ9O7RoJARVxm0Wlp1W0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 11:39:13 GMT"
+          "Value": "Tue, 14 Jan 2025 11:26:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1580,12 +1601,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-sOd6To49yxSHhv+J3Qc8fdQ6Xx2ri6PE5egMyEFXmnk="
+          "Value": "sha256-oc6ccIjMXTCCxV/dnIAskAVgJ9O7RoJARVxm0Wlp1W0="
         }
       ]
     },
     {
-      "Route": "css/site.ct34cosm0c.css",
+      "Route": "css/site.r1ayyqo99v.css",
       "AssetFile": "D:\\C Sharp\\Appointment\\Appointment\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1595,7 +1616,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2657"
+          "Value": "3312"
         },
         {
           "Name": "Content-Type",
@@ -1603,11 +1624,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sOd6To49yxSHhv+J3Qc8fdQ6Xx2ri6PE5egMyEFXmnk=\""
+          "Value": "\"oc6ccIjMXTCCxV/dnIAskAVgJ9O7RoJARVxm0Wlp1W0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 11:39:13 GMT"
+          "Value": "Tue, 14 Jan 2025 11:26:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1617,7 +1638,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ct34cosm0c"
+          "Value": "r1ayyqo99v"
         },
         {
           "Name": "label",
@@ -1625,7 +1646,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-sOd6To49yxSHhv+J3Qc8fdQ6Xx2ri6PE5egMyEFXmnk="
+          "Value": "sha256-oc6ccIjMXTCCxV/dnIAskAVgJ9O7RoJARVxm0Wlp1W0="
         }
       ]
     },
@@ -1708,6 +1729,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/bg.png",
+      "AssetFile": "D:\\C Sharp\\Appointment\\Appointment\\wwwroot\\images\\bg.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "424580"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A8JlwYEYpQCZBO+W01umf4Lkrjg3g/eXNN7NgBr32zY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Jan 2025 13:17:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-A8JlwYEYpQCZBO+W01umf4Lkrjg3g/eXNN7NgBr32zY="
+        }
+      ]
+    },
+    {
+      "Route": "images/bg.t88d7riodf.png",
+      "AssetFile": "D:\\C Sharp\\Appointment\\Appointment\\wwwroot\\images\\bg.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "424580"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A8JlwYEYpQCZBO+W01umf4Lkrjg3g/eXNN7NgBr32zY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Jan 2025 13:17:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t88d7riodf"
+        },
+        {
+          "Name": "label",
+          "Value": "images/bg.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-A8JlwYEYpQCZBO+W01umf4Lkrjg3g/eXNN7NgBr32zY="
         }
       ]
     },

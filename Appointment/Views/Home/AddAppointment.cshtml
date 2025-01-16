@@ -1,0 +1,159 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    var servicesList = ViewData["ServicesList"] as List<Appointment.Models.ServicesModel>;
+}
+@{
+    var dentistscheduleList = ViewData["DentistScheduleList"] as List<Appointment.Models.DentistScheduleModel>;
+}
+@model ServicesModel
+
+@{
+    var userId = Context.Session.GetString("userId");
+    var userType = Context.Session.GetString("userType");
+}
+<div class="container-fluid p-0 m-0 first-screen">
+    <div class="container pt-5">
+        <form asp-action="AddAppointment" method="POST">
+            <input type="text" name="users_id" id="userId" value="@userId" />
+            <div class="bg-white p-5">
+                <h2>@Model?.Title</h2>
+                <br />
+                <h3>Select Dentist</h3>
+                <div class="row">
+                    @if (servicesList != null && servicesList.Any())
+                    {
+                        foreach (var services in servicesList)
+                        {
+                            <div class="col-lg-3 mt-3">
+                                <a href="/Home/AddAppointment/@services.Id" class="text-decoration-none text-dark">
+                                    <div class="card shadow">
+                                        <div class="card-body">
+                                            <h3>@services.Title</h3>
+                                            <p>@services.Description</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <div class="row">
+                    @if (dentistscheduleList != null && dentistscheduleList.Any())
+                    {
+                        foreach (var dentistschedule in dentistscheduleList)
+                        {
+                            if (@Model?.Id == dentistschedule.ServicesId)
+                            {
+
+                                var timeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila");
+                                var StartTime = DateTime.Parse(dentistschedule.StartTime);
+                                var phtStartTime = TimeZoneInfo.ConvertTime(StartTime, timeZone);
+                                var start_time = phtStartTime.ToString("hh:mm tt");
+
+                                var EndTime = DateTime.Parse(dentistschedule.EndTime);
+                                var phtEndTime = TimeZoneInfo.ConvertTime(EndTime, timeZone);
+                                var end_time = phtEndTime.ToString("hh:mm tt");
+
+                                <div class="col-lg-3 mt-3">
+                                    <div class="card shadow">
+                                        <div class="card-body schedule-card">
+                                            <h3>Dentist: @dentistschedule.FirstName @dentistschedule.LastName</h3>
+                                            <h5>Date: @dentistschedule.DateAvailable</h5>
+                                            <p>Availability: @start_time - @end_time</p>
+                                            <input type="radio" value="@dentistschedule.Id" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                    <input type="hidden" id="DentistScheduleId" name="dentist_schedule_id" />
+
+                    <div class="col-lg-12 mt-3">
+                        <label for="appointment_time" class="fw-bold">Appointment Time:</label>
+                        <select name="appointment_time" id="AppointmentTime" class="form-control">
+                            <option value="8:00 AM - 9:00 AM">8:00 AM - 9:00 AM</option>
+                            <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+                            <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 PM</option>
+                            <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                            <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
+                            <option value="1:00 PM - 2:00 PM">1:00 PM - 2:00 PM</option>
+                            <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                            <option value="3:00 PM - 4:00 PM">3:00 PM - 4:00 PM</option>
+                            <option value="4:00 PM - 5:00 PM">4:00 PM - 5:00 PM</option>
+                            <option value="5:00 PM - 6:00 PM">5:00 PM - 6:00 PM</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <button type="submit" class="btn btn-block btn-flat" style="background: #00bf63; color: #fff; border: unset;height: 45px;font-size: 23px;" name="appointment">Set Appointment</button>
+            @ViewData["Message"]
+        </form>
+    </div>
+</div>
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        <div class="row m-0">
+            <div class="col-lg-6">
+                <div class="card border-0 border-bottom border-3">
+                    <div class="card-body text-center">
+                        <h2>57</h2>
+                        <span>Sample text</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card border-0 border-bottom border-3">
+                    <div class="card-body text-center">
+                        <h2>1007</h2>
+                        <span>Sample text</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-4 mt-3">
+                <div class="card border-0 border-bottom border-3">
+                    <div class="card-body text-center">
+                        <h2>Our Location</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+            </div>
+        </div>
+        <br>
+        <div class="text-center">
+            <button class="btn btn-primary">BOOK APPOINTMENT</button>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+        $(document).ready(function() {
+        $('.schedule-card').on('click', function() {
+            // Remove the highlight from all cards
+            $('.schedule-card').css('border', '2px solid transparent');
+
+            // Add a blue border to the selected card
+            $(this).css('border', '2px solid #0d6efd');
+
+            // Uncheck all radio buttons
+            $('input[type="radio"]').prop('checked', false);
+
+            // Check the radio button inside the clicked card
+            $(this).find('input[type="radio"]').prop('checked', true);
+
+            // Update the hidden input field with the selected dentist_schedule_id
+            var selectedScheduleId = $(this).find('input[type="radio"]').val();
+            $('#DentistScheduleId').val(selectedScheduleId); // Ensure this updates the hidden input
+        });
+    });
+
+</script>
+

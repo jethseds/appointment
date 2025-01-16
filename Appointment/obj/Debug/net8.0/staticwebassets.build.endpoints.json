@@ -99,7 +99,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2657"
+          "Value": "3312"
         },
         {
           "Name": "Content-Type",
@@ -107,22 +107,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sOd6To49yxSHhv+J3Qc8fdQ6Xx2ri6PE5egMyEFXmnk=\""
+          "Value": "\"oc6ccIjMXTCCxV/dnIAskAVgJ9O7RoJARVxm0Wlp1W0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 11:39:13 GMT"
+          "Value": "Tue, 14 Jan 2025 11:26:51 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-sOd6To49yxSHhv+J3Qc8fdQ6Xx2ri6PE5egMyEFXmnk="
+          "Value": "sha256-oc6ccIjMXTCCxV/dnIAskAVgJ9O7RoJARVxm0Wlp1W0="
         }
       ]
     },
     {
-      "Route": "css/site.ct34cosm0c.css",
+      "Route": "css/site.r1ayyqo99v.css",
       "AssetFile": "css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -136,7 +136,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2657"
+          "Value": "3312"
         },
         {
           "Name": "Content-Type",
@@ -144,21 +144,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sOd6To49yxSHhv+J3Qc8fdQ6Xx2ri6PE5egMyEFXmnk=\""
+          "Value": "\"oc6ccIjMXTCCxV/dnIAskAVgJ9O7RoJARVxm0Wlp1W0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 12 Jan 2025 11:39:13 GMT"
+          "Value": "Tue, 14 Jan 2025 11:26:51 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ct34cosm0c"
+          "Value": "r1ayyqo99v"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-sOd6To49yxSHhv+J3Qc8fdQ6Xx2ri6PE5egMyEFXmnk="
+          "Value": "sha256-oc6ccIjMXTCCxV/dnIAskAVgJ9O7RoJARVxm0Wlp1W0="
         },
         {
           "Name": "label",
@@ -245,6 +245,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/bg.png",
+      "AssetFile": "images/bg.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "424580"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A8JlwYEYpQCZBO+W01umf4Lkrjg3g/eXNN7NgBr32zY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Jan 2025 13:17:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-A8JlwYEYpQCZBO+W01umf4Lkrjg3g/eXNN7NgBr32zY="
+        }
+      ]
+    },
+    {
+      "Route": "images/bg.t88d7riodf.png",
+      "AssetFile": "images/bg.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "424580"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A8JlwYEYpQCZBO+W01umf4Lkrjg3g/eXNN7NgBr32zY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Jan 2025 13:17:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t88d7riodf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-A8JlwYEYpQCZBO+W01umf4Lkrjg3g/eXNN7NgBr32zY="
+        },
+        {
+          "Name": "label",
+          "Value": "images/bg.png"
         }
       ]
     },

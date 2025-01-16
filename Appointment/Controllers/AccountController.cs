@@ -68,7 +68,16 @@ namespace Appointment.Controllers
                                         HttpContext.Session.SetString("userType", userType.ToString() ?? "defaultUserType");
 
                                         ViewData["Message"] = "Login successful!";
-                                        return Redirect("/Admin/Dashboard");
+
+
+                                        if (userType.ToString() == "1")
+                                        {
+                                            return Redirect("/Admin/Employees");
+                                        } else
+                                        {
+                                            return Redirect("/");
+                                        }
+                                        
 
                                     } else
                                     {
@@ -143,8 +152,8 @@ namespace Appointment.Controllers
 
                     // If no duplicate is found, proceed to insert the new user
                     var insertQuery = @"
-                INSERT INTO users (firstname, middlename, lastname, email, password) 
-                VALUES (@FirstName, @MiddleName, @LastName, @Email, @PasswordHash)";
+                INSERT INTO users (firstname, middlename, lastname, email, password, type) 
+                VALUES (@FirstName, @MiddleName, @LastName, @Email, @PasswordHash, @Type)";
 
                     using (var insertCommand = new SqlCommand(insertQuery, connection))
                     {
@@ -153,6 +162,7 @@ namespace Appointment.Controllers
                         insertCommand.Parameters.AddWithValue("@LastName", lastname);
                         insertCommand.Parameters.AddWithValue("@Email", email);
                         insertCommand.Parameters.AddWithValue("@PasswordHash", passwordHash);
+                        insertCommand.Parameters.AddWithValue("@Type", 0);
 
                         insertCommand.ExecuteNonQuery();
                     }
@@ -173,6 +183,13 @@ namespace Appointment.Controllers
 
             return View();
         }
+        public IActionResult Logout()
+        {
+            // Destroy the session
+            HttpContext.Session.Clear();
 
+            // Redirect the user to the home page or login page
+            return RedirectToAction("Index", "Home"); // Or your login page
+        }
     }
 }
