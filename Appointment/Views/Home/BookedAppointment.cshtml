@@ -3,23 +3,47 @@
 }
 
 <link rel="stylesheet" href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css" />
-<div class="wrapper">
-    @Html.Partial("~/Views/Shared/_Sidebar.cshtml")
 
-    <div class="container-fluid bg-light" style="height: 100vh;">
+@{
+    var userId = Context.Session.GetString("userId");
+    var userType = Context.Session.GetString("userType");
+}
+
+<div class="container-fluid p-0 m-0 ">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent mb-3">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse d-flex justify-content-end">
+                <div>
+                    <a class="btn btn-primary" href="/">HOME</a>
+                </div>
+                <div class="m-3">
+                    <a class="btn btn-primary" href="/Home/AddAppointment">BOOK APPOINTMENT</a>
+                </div>
+                <div class="me-3">
+                    <a class="btn btn-primary" href="/Home/BookedAppointment">BOOKED APPOINTMENT</a>
+                </div>
+                <div class="me-3">
+                    <a class="btn btn-primary" href="/Home/Profile">PROFILE</a>
+                </div>
+                <div>
+                    <a class="btn btn-primary" href="@Url.Action("Logout", "Account")">LOGOUT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
         @{
             var patientscheduleList = ViewData["PatientScheduleList"] as List<Appointment.Models.PatientScheduleModel>;
             var dentistservicesList = ViewData["DentistServicesList"] as List<Appointment.Models.DentistServicesModel>;
         }
-
+    <div class="container pt-5">
         <table id="example" class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Client Name</th>
+                    <th>Dentist Name</th>
                     <th>Services</th>
                     <th>Date</th>
                     <th>Time</th>
-                    <th>Action</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -52,6 +76,8 @@
                 {
                     foreach (var patientschedule in patientscheduleList)
                     {
+
+                        if (@userId == patientschedule.UsersId) { 
                         // Split ServicesId into an array
                         var serviceIds = patientschedule.ServicesId.Split(',');
 
@@ -106,11 +132,10 @@
                                     <span>Invalid Appointment Time</span>
                                 }
                             </td>
-                            <td>
-                                <a href="/Admin/PatientMedicalHistory/@patientschedule.Id" class="btn btn-warning btn-sm">Medical History</a>
-                            </td>
-                            
+
                         </tr>
+
+                        }
                     }
                 }
                 else
@@ -123,7 +148,7 @@
             </tbody>
         </table>
 
-
+    </div>
     </div>
 
 </div>
@@ -132,5 +157,5 @@
 <script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
 <script src="https://cdn.datatables.net/2.2.1/js/dataTables.bootstrap5.js"></script>
 <script>
-     new DataTable('#example');
+    new DataTable('#example');
 </script>

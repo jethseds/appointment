@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "D:\\C Sharp\\Appointment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|d:\\c sharp\\appointment\\appointment\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|solutionrelative:appointment\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|d:\\c sharp\\appointment\\appointment\\views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|solutionrelative:appointment\\views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|d:\\c sharp\\appointment\\appointment\\views\\admin\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|solutionrelative:appointment\\views\\admin\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|d:\\c sharp\\appointment\\appointment\\views\\home\\addappointment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|solutionrelative:appointment\\views\\home\\addappointment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|d:\\c sharp\\appointment\\appointment\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|solutionrelative:appointment\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|d:\\c sharp\\appointment\\appointment\\views\\admin\\patientschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|solutionrelative:appointment\\views\\admin\\patientschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|d:\\c sharp\\appointment\\appointment\\views\\admin\\adddentistschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09807394-DE3B-44EF-A5A2-9A4907E2FF0F}|Appointment\\Appointment.csproj|solutionrelative:appointment\\views\\admin\\adddentistschedule.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,39 +34,67 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AddDentistSchedule.cshtml",
-              "DocumentMoniker": "D:\\C Sharp\\Appointment\\Appointment\\Views\\Admin\\AddDentistSchedule.cshtml",
-              "RelativeDocumentMoniker": "Appointment\\Views\\Admin\\AddDentistSchedule.cshtml",
-              "ToolTip": "D:\\C Sharp\\Appointment\\Appointment\\Views\\Admin\\AddDentistSchedule.cshtml",
-              "RelativeToolTip": "Appointment\\Views\\Admin\\AddDentistSchedule.cshtml",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAIoAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AddAppointment.cshtml",
+              "DocumentMoniker": "D:\\C Sharp\\Appointment\\Appointment\\Views\\Home\\AddAppointment.cshtml",
+              "RelativeDocumentMoniker": "Appointment\\Views\\Home\\AddAppointment.cshtml",
+              "ToolTip": "D:\\C Sharp\\Appointment\\Appointment\\Views\\Home\\AddAppointment.cshtml",
+              "RelativeToolTip": "Appointment\\Views\\Home\\AddAppointment.cshtml",
+              "ViewState": "AgIAABoBAAAAAAAAAAAkwDMBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T11:52:37.818Z"
+              "WhenOpened": "2025-01-24T10:43:57.031Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PatientSchedule.cshtml",
-              "DocumentMoniker": "D:\\C Sharp\\Appointment\\Appointment\\Views\\Admin\\PatientSchedule.cshtml",
-              "RelativeDocumentMoniker": "Appointment\\Views\\Admin\\PatientSchedule.cshtml",
-              "ToolTip": "D:\\C Sharp\\Appointment\\Appointment\\Views\\Admin\\PatientSchedule.cshtml",
-              "RelativeToolTip": "Appointment\\Views\\Admin\\PatientSchedule.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "D:\\C Sharp\\Appointment\\Appointment\\Views\\Home\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Appointment\\Views\\Home\\Profile.cshtml",
+              "ToolTip": "D:\\C Sharp\\Appointment\\Appointment\\Views\\Home\\Profile.cshtml",
+              "RelativeToolTip": "Appointment\\Views\\Home\\Profile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T11:39:11.164Z"
+              "WhenOpened": "2025-01-24T10:43:50.754Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\C Sharp\\Appointment\\Appointment\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Appointment\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\C Sharp\\Appointment\\Appointment\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Appointment\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAANcBAAAAAAAAAAAowOABAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T10:43:08.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "D:\\C Sharp\\Appointment\\Appointment\\Views\\Admin\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Appointment\\Views\\Admin\\Profile.cshtml",
+              "ToolTip": "D:\\C Sharp\\Appointment\\Appointment\\Views\\Admin\\Profile.cshtml",
+              "RelativeToolTip": "Appointment\\Views\\Admin\\Profile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-24T08:29:02.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\C Sharp\\Appointment\\Appointment\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Appointment\\Controllers\\AdminController.cs",
               "ToolTip": "D:\\C Sharp\\Appointment\\Appointment\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Appointment\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAGkDAAAAAAAAAADwv3ADAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0EAAAAAAAAAAAUwFAEAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T09:53:14.166Z",
+              "WhenOpened": "2025-01-24T08:28:06.867Z",
               "EditorCaption": ""
             }
           ]

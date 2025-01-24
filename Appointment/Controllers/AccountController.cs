@@ -70,11 +70,24 @@ namespace Appointment.Controllers
                                         ViewData["Message"] = "Login successful!";
 
 
-                                        if (userType.ToString() == "1")
+                                        if (userType.ToString() == "3")
                                         {
+                                            // Admin
                                             return Redirect("/Admin/Employees");
-                                        } else
+                                        }
+                                        else if (userType.ToString() == "1")
                                         {
+                                            // Dentist
+                                            return Redirect("/Admin/PatientSchedule");
+                                        }
+                                        else if (userType.ToString() == "2")
+                                        {
+                                            // Receptionist
+                                            return Redirect("/Admin/DentistSchedule");
+                                        }
+                                        else
+                                        {
+                                            // Client
                                             return Redirect("/");
                                         }
                                         

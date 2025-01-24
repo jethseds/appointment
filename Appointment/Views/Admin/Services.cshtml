@@ -4,28 +4,7 @@
 
 <link rel="stylesheet" href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css" />
 <div class="wrapper">
-    <div class="sidebar">
-        <ul class="nav flex-column">
-            <li class="nav-item mt-5 mb-5 text-center">
-                <a class="nav-link text-secondary fw-semibold" href="#">
-                    <img src="/images/logo.png" width="100px">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-secondary fw-semibold" href="/Admin/Employees"><i class="fas fa-users"></i> Employees</a>
-                <a class="nav-link text-secondary fw-semibold" href="/Admin/DentistSchedule"><i class="fas fa-calendar"></i> Dentist Schedule</a>
-                <a class="nav-link text-secondary fw-semibold" href="/Admin/PatientSchedule"><i class="fas fa-calendar"></i> Patient Schedule</a>
-                <a class="nav-link text-secondary fw-semibold" href="/Admin/Services"><i class="fas fa-cog"></i> Services</a>
-            </li>
-        </ul>
-
-        <!-- Logout at the bottom -->
-        <ul class="nav flex-column mt-auto">
-            <li class="nav-item">
-                <a class="nav-link text-secondary fw-semibold" href="@Url.Action("Logout", "Account")"><i class="fas fa-sign-out"></i> Logout</a>
-            </li>
-        </ul>
-    </div>
+    @Html.Partial("~/Views/Shared/_Sidebar.cshtml")
 
     <div class="container-fluid bg-light" style="height: 100vh;">
         @{
@@ -39,6 +18,7 @@
                 <tr>
                     <th>Title</th>
                     <th>Description</th>
+                    <th>Hours</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -50,6 +30,7 @@
                         <tr>
                             <td>@services.Title</td>
                             <td>@services.Description</td>
+                            <td>@services.Hours</td>
                             <td>
                                 <a href="/Admin/AddServices/@services.Id" class="btn btn-success btn-sm">Edit</a>
                                 <a href="javascript:void(0);" class="btn btn-danger btn-sm deleteBtn" data-id="@services.Id">Delete</a>

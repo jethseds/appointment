@@ -4,61 +4,43 @@
 
 <link rel="stylesheet" href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css" />
 <div class="wrapper">
-<div class="sidebar">
-  <ul class="nav flex-column">
-    <li class="nav-item mt-5 mb-5 text-center">
-      <a class="nav-link text-secondary fw-semibold" href="#">
-        <img src="/images/logo.png" width="100px">
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-secondary fw-semibold" href="/Admin/Employees"><i class="fas fa-users"></i> Employees</a>
-      <a class="nav-link text-secondary fw-semibold" href="/Admin/DentistSchedule"><i class="fas fa-calendar"></i> Dentist Schedule</a>
-                <a class="nav-link text-secondary fw-semibold" href="/Admin/PatientSchedule"><i class="fas fa-calendar"></i> Patient Schedule</a>
-      <a class="nav-link text-secondary fw-semibold" href="/Admin/Services"><i class="fas fa-cog"></i> Services</a>
-    </li>
-  </ul>
+    @Html.Partial("~/Views/Shared/_Sidebar.cshtml")
 
-  <!-- Logout at the bottom -->
-  <ul class="nav flex-column mt-auto">
-    <li class="nav-item">
-                <a class="nav-link text-secondary fw-semibold" href="@Url.Action("Logout", "Account")"><i class="fas fa-sign-out"></i> Logout</a>
-    </li>
-  </ul>
-</div>
-
-<div class="container-fluid bg-light" style="height: 100vh;">
-@{
-    var accountList = ViewData["AccountList"] as List<Appointment.Models.AccountModel>;
-}
-    <div class="py-3">
-         <a class="btn btn-primary fw-semibold" href="/Admin/Addemployees"><i class="fas fa-plus"></i> Add Employee</a>
-    </div>
-    <table id="example" class="table table-bordered">
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Middle Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (accountList != null && accountList.Any())
-            {
-                foreach (var account in accountList)
+    <div class="container-fluid bg-light" style="height: 100vh;">
+        @{
+            var accountList = ViewData["AccountList"] as List<Appointment.Models.AccountModel>;
+        }
+        <div class="py-3">
+            <a class="btn btn-primary fw-semibold" href="/Admin/Addemployees"><i class="fas fa-plus"></i> Add Employee</a>
+        </div>
+        <table id="example" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (accountList != null && accountList.Any())
                 {
-                    <tr>
-                        <td>@account.FirstName</td>
-                        <td>@account.MiddleName</td>
-                        <td>@account.LastName</td>
-                        <td>@account.Email</td>
-                        <td>
+                    foreach (var account in accountList)
+                    {
+                        if (account.Type == "1" || account.Type == "2")
+                        {
+                            <tr>
+                                <td>@account.FirstName</td>
+                                <td>@account.MiddleName</td>
+                                <td>@account.LastName</td>
+                                <td>@account.Email</td>
+                                <td>
                                 <a href="/Admin/Addemployees/@account.Id" class="btn btn-success btn-sm">Edit</a>
                                 <a href="javascript:void(0);" class="btn btn-danger btn-sm deleteBtn" data-id="@account.Id">Delete</a>
-                        </td>
-                    </tr>
+                                </td>
+                        </tr>
+                    }
                 }
             }
             else

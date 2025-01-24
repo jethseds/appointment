@@ -4,32 +4,17 @@
 
 <link rel="stylesheet" href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css" />
 <div class="wrapper">
-    <div class="sidebar">
-        <ul class="nav flex-column">
-            <li class="nav-item mt-5 mb-5 text-center">
-                <a class="nav-link text-secondary fw-semibold" href="#">
-                    <img src="/images/logo.png" width="100px">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-secondary fw-semibold" href="/Admin/Employees"><i class="fas fa-users"></i> Employees</a>
-                <a class="nav-link text-secondary fw-semibold" href="/Admin/DentistSchedule"><i class="fas fa-calendar"></i> Dentist Schedule</a>
-                <a class="nav-link text-secondary fw-semibold" href="/Admin/PatientSchedule"><i class="fas fa-calendar"></i> Patient Schedule</a>
-                <a class="nav-link text-secondary fw-semibold" href="/Admin/Services"><i class="fas fa-cog"></i> Services</a>
-            </li>
-        </ul>
-
-        <!-- Logout at the bottom -->
-        <ul class="nav flex-column mt-auto">
-            <li class="nav-item">
-                <a class="nav-link text-secondary fw-semibold" href="@Url.Action("Logout", "Account")"><i class="fas fa-sign-out"></i> Logout</a>
-            </li>
-        </ul>
-    </div>
+    @Html.Partial("~/Views/Shared/_Sidebar.cshtml")
 
     <div class="container-fluid bg-light" style="height: 100vh;">
         @{
             var dentistscheduleList = ViewData["DentistScheduleList"] as List<Appointment.Models.DentistScheduleModel>;
+        }
+        @if (!string.IsNullOrEmpty(ViewData["Message"] as string))
+        {
+            <div class="alert alert-warning">
+                @ViewData["Message"]
+            </div>
         }
         <div class="py-3">
             <a class="btn btn-primary fw-semibold" href="/Admin/AddDentistSchedule"><i class="fas fa-plus"></i> Add Schedule</a>
@@ -38,7 +23,6 @@
             <thead>
                 <tr>
                     <th>Dentist Name</th>
-                    <th>Services</th>
                     <th>Date Available</th>
                     <th>Start Time</th>
                     <th>End Time</th>
@@ -62,11 +46,11 @@
 
                         <tr>
                             <td>@dentistschedule.FirstName @dentistschedule.LastName</td>
-                            <td>@dentistschedule.Title</td>
                             <td>@dentistschedule.DateAvailable</td>
                             <td>@start_time</td>
                             <td>@end_time</td>
                             <td>
+                                <a href="/Admin/DentistServices/@dentistschedule.UsersId" class="btn btn-warning btn-sm">Services</a>
                                 <a href="/Admin/AddDentistSchedule/@dentistschedule.Id" class="btn btn-success btn-sm">Edit</a>
                                 <a href="javascript:void(0);" class="btn btn-danger btn-sm deleteBtn" data-id="@dentistschedule.Id">Delete</a>
                             </td>
